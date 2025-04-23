@@ -1,0 +1,13 @@
+html
+  head
+    title Moviespage
+    link(rel="stylesheet", href="./output.css")
+    
+    body(class="max-w-3xl mx-auto bg-[#000217]")
+        h1(class="mt-16 font-bold text-5xl") Movies
+        div(class="mt-8 grid md:grid-cols-4 gap-4")
+          each movie in data
+            a(href=`/movies/${movie.id}`)  
+              img(src=`https://image.tmdb.org/t/p/w500${movie.poster_path}`, alt="")
+              h2(class="text-lg text-[#fff]")= movie.title 
+              p(class="text-amber-700")= movie.vote_average

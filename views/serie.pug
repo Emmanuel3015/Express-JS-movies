@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/output.css")
+        title= data.original_name
+    body(class="bg-[#000217]")
+        div(class="grid grid-cols-2 gap-8 max-w-4xl mx-auto mt-28")
+            div
+                img(src=`https://image.tmdb.org/t/p/w300${data.poster_path}`, alt="")
+            div
+                h1(class="font-bold text-5xl text-[#fff]")= data.original_name
+                p(class="text-orange-700 mt-4 font-semibold")=data.overview
+                p(class="text-[#fff]")=data.vote_average
